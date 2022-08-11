@@ -1,0 +1,21 @@
+<h1 class="center heading">Learning About HTML</h1>
+
+<div  *ngFor="let instaSrc of this.sanitizedURL; let i = index" style="text-align: center; align-items:center;">
+<div  [ngStyle]="{'float':i+1%2==0?'right':'left'}">
+
+<mat-card>
+
+  <mat-car-content>
+    <li>{{i+1}}</li>
+    <iframe [src]='instaSrc' width="400" height="480" class="iframeStyle" frameborder="0" scrolling="no"
+      allowtransparency="true"></iframe>
+  </mat-car-content>
+  <br>
+  <mat-card-action>
+    <button mat-button  class="primary" (click)="openDialog(instaSrc)">Popup view</button>
+  </mat-card-action>
+
+</mat-card>
+
+</div>
+</div>
