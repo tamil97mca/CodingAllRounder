@@ -12,6 +12,7 @@
   font-style: italic;
 }
 *{
+  scroll-behavior: smooth;
   color: #999999;
   padding: 0%;
   margin: 0%;
