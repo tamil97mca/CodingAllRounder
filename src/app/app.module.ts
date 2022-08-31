@@ -62,6 +62,11 @@ import {MatCardModule} from '@angular/material/card';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import { LoginComponent } from './login/login.component';
+import { AboutComponent } from './about/about.component';
+import { UserlistComponent } from './userlist/userlist.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { MenuComponent } from './menu/menu.component'
 
 @NgModule({
   declarations: [
@@ -116,7 +121,11 @@ import {MatDialog, MatDialogModule} from '@angular/material/dialog';
     PLANYOURPROJECTSASADEVELOPERComponent,
     APIComponent,
     WELCOMEComponent,
-    DialogComponent
+    DialogComponent,
+    LoginComponent,
+    AboutComponent,
+    UserlistComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
@@ -127,6 +136,7 @@ import {MatDialog, MatDialogModule} from '@angular/material/dialog';
     MatNativeDateModule,
     MatButtonModule,
     MatDialogModule,
+    MatMenuModule
   ],
   providers: [
     MatDialog,

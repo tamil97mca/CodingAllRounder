@@ -19,7 +19,7 @@ export class APIComponent implements OnInit {
   constructor(public domSanitizer: DomSanitizer, public dialog: MatDialog) {
     this.popupSrc = [
       'CelKBAnvMA2', 'CfGEXnALBl5', 'Ce87Ah7PRNP', 'CdXcTzVqv5j',
-      'CelKBAnvMA2', 'CfGEXnALBl5', 'Ce87Ah7PRNP', 'CdXcTzVqv5j'
+      'Cg-_4P9MooP', 'Ca6PIgEDQaw', 'CVKISW8Fsv-', 'CR5dnGLjiLQ', 'ChHYSWeD5uj', 'ChMZ9HgDX88', 'Ch12dtWD6DF'
     ];
 
     for (let src of this.popupSrc) {

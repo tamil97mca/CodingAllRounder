@@ -1,3 +1,21 @@
+/* Light Mode */
+
+@media(prefers-color-scheme: light) {
+:root {
+  --body-bg: #ffffff !important;
+  --body-color: #000000 !important;
+}
+}
+
+/* Dark Mode */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body-bg: #000000 !important;
+    --body-color: #ffffff !important;
+  }
+}
+
 /* You can add global styles to this file, and also import other style files */
 .center{
   text-align: center;
@@ -5,8 +23,38 @@
 .p{
   font-family: Nunito;
 }
+p::first-letter{
+  color: #F00;
+  font-size: 32px;
+  font-weight: bold;
+}
+/* p::first-line {
+  color: #F00;
+  font-size: 32px;
+  font-weight: bold;
+} */
+p::before {
+  content: "Hi there, ";
+  color: #F00;
+}
+p::after {
+  content: "...!";
+  color: #F00;
+}
+p::selection {
+  background: #F00;
+  color: #FFF;
+}
+p::placeholder {
+  color: #F00;
+}
 .heading{
   font-family: Bebas Neue;
+  filter: drop-shadow(0px 0px 20px #121212);
+
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .i{
   font-style: italic;
