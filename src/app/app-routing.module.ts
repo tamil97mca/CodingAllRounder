@@ -7,6 +7,7 @@ import { DATASTRUCTURESComponent } from './datastructures/datastructures.compone
 import { GITHUBANDGITLABComponent } from './githubandgitlab/githubandgitlab.component';
 import { HTMLComponent } from './html/html.component';
 import { HTTPANDHTTPSComponent } from './httpandhttps/httpandhttps.component';
+import { InstafeedComponent } from './instafeed/instafeed.component';
 import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component';
 import { UserlistComponent } from './userlist/userlist.component';
@@ -25,7 +26,8 @@ const routes: Routes = [
   { path: "Login", component: LoginComponent },
   { path: "about", component: AboutComponent },
   { path: "userlist", component: UserlistComponent},
-  { path: "menu", component: MenuComponent}
+  { path: "menu", component: MenuComponent},
+  { path: "instafeed", component: InstafeedComponent }
 ];
 
 @NgModule({

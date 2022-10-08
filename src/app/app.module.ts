@@ -66,7 +66,13 @@ import { LoginComponent } from './login/login.component';
 import { AboutComponent } from './about/about.component';
 import { UserlistComponent } from './userlist/userlist.component';
 import { MatMenuModule } from '@angular/material/menu';
-import { MenuComponent } from './menu/menu.component'
+import { MenuComponent } from './menu/menu.component';
+
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { CouchInterceptor } from './couch.interceptor';
+import { InstafeedComponent } from './instafeed/instafeed.component';
+
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -125,7 +131,8 @@ import { MenuComponent } from './menu/menu.component'
     LoginComponent,
     AboutComponent,
     UserlistComponent,
-    MenuComponent
+    MenuComponent,
+    InstafeedComponent
   ],
   imports: [
     BrowserModule,
@@ -136,10 +143,13 @@ import { MenuComponent } from './menu/menu.component'
     MatNativeDateModule,
     MatButtonModule,
     MatDialogModule,
-    MatMenuModule
+    MatMenuModule,
+    HttpClientModule,
+    MatSidenavModule
   ],
   providers: [
     MatDialog,
+    {provide: HTTP_INTERCEPTORS, useClass: CouchInterceptor, multi: true}
   ],
   bootstrap: [AppComponent],
   entryComponents: [DialogComponent],

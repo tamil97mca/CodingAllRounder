@@ -18,15 +18,26 @@ export class APIComponent implements OnInit {
 
   constructor(public domSanitizer: DomSanitizer, public dialog: MatDialog) {
     this.popupSrc = [
-      'CelKBAnvMA2', 'CfGEXnALBl5', 'Ce87Ah7PRNP', 'CdXcTzVqv5j',
+      'CelKBAnvMA2', 'CfGEXnALBl5', 'Ce87Ah7PRNP', 'CdXcTzVqv5j'
+    ];
+    this.imgLoader();
+  }
+
+  ngOnInit(): void {
+
+    this.popupSrc = [
       'Cg-_4P9MooP', 'Ca6PIgEDQaw', 'CVKISW8Fsv-', 'CR5dnGLjiLQ', 'ChHYSWeD5uj', 'ChMZ9HgDX88', 'Ch12dtWD6DF'
     ];
 
+    this.imgLoader();
+  }
+
+  imgLoader() {
     for (let src of this.popupSrc) {
+      debugger;
       this.sanitizedURL.push(this.domSanitizer.bypassSecurityTrustResourceUrl(`https://www.instagram.com/p/${src}/embed`));
     }
   }
-
 
   openDialog(imgSrc: any): void {
     const dialogRef = this.dialog.open(DialogComponent, {
@@ -40,10 +51,6 @@ export class APIComponent implements OnInit {
       console.log('The dialog was closed');
       this.popupTitle = result;
     });
-  }
-
-
-  ngOnInit(): void {
   }
 
 }
